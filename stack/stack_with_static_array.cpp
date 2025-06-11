@@ -5,25 +5,32 @@ class Stack {
     int arr[Max];  
     int top; 
 public:
-    Stack(){
+    Stack()
+    {
         top = -1;
     }
-    void push(int x){
-        if(top>= Max - 1){
+    void push(int x)
+    {
+        if(top>= Max - 1)
+        {
             cout << "stack overflow" << endl;
             return;
         }
          arr[++top] = x;
     }
-     void pop() {
-        if (top < 0) {
+     void pop() 
+    {
+        if (top < 0) 
+        {
             cout << "Stack Underflow\n";
             return;
         }
         top--;
     }
-    int peek() {
-        if (top < 0) {
+    int peek() 
+    {
+        if (top < 0) 
+        {
             cout << "Stack is Empty\n";
             return -1;
         }
@@ -33,22 +40,23 @@ public:
     {
         return (top < 0);
     }
-    void display() {
-        if (top < 0) {
+    void display() 
+    {
+        if (top < 0) 
+        {
             cout << "Stack is Empty\n";
             return;
         }
-        else{
+        else
+        {
             cout << "Stack elements are: ";
-        for (int i = top; i >= 0; i--) {
-            cout << arr[i] << " ";
-        }
+            for (int i = top; i >= 0; i--) 
+            {
+                cout << arr[i] << " ";
+            }
         cout << endl;
         }
-        
     }
-
-
 }; 
 int main() {
     Stack s;
