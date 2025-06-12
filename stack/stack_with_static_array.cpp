@@ -9,25 +9,25 @@ public:
     {
         top = -1;
     }
-    void push(int x)
+    void push(int x) //it will push the values into the stack
     {
         if(top>= Max - 1)
         {
-            cout << "stack overflow" << endl;
+            cout << "stack overflow" << endl; //stack overflow happens when the stack is full
             return;
         }
          arr[++top] = x;
     }
-     void pop() 
+     void pop() //it will remove the the top of the stack value and will return it 
     {
         if (top < 0) 
         {
-            cout << "Stack Underflow\n";
+            cout << "Stack Underflow\n"; //stack underflow happens when the stack is empty
             return;
         }
         top--;
     }
-    int peek() 
+    int peek() //it will return the top of the stack value but will not remove it 
     {
         if (top < 0) 
         {
@@ -40,7 +40,7 @@ public:
     {
         return (top < 0);
     }
-    void display() 
+    void display()  // +it will display the stack
     {
         if (top < 0) 
         {
