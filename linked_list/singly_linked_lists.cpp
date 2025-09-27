@@ -1,11 +1,14 @@
 #include <iostream>
 using namespace std;
 
-struct Node {       // Node structure for singly linked list
+// Node structure for singly linked list
+struct Node {       
     int data;
     Node* next;
 };
-void insert(Node*& head, int value) {       // Function to insert a new node at the end of the list
+
+// Function to insert a new node at the end of the list
+void insert(Node*& head, int value) {       
     Node* newNode = new Node{value, nullptr};
 
     if (head == nullptr) {
@@ -20,7 +23,8 @@ void insert(Node*& head, int value) {       // Function to insert a new node at 
     temp->next = newNode;
 }
 
-void print(Node* head) {   // Print all nodes
+// Print all nodes
+void print(Node* head) {   
     while (head) {
         cout << head->data << " -> ";
         head = head->next;
@@ -28,7 +32,8 @@ void print(Node* head) {   // Print all nodes
     cout << "NULL" << endl;
 }
 
-void freeList(Node*& head) {  // Free memory
+// Free memory
+void freeList(Node*& head) {  
     while (head) {
         Node* temp = head;
         head = head->next;
@@ -47,3 +52,4 @@ int main() {
     freeList(head);
     return 0;
 }
+
